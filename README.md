@@ -1,48 +1,36 @@
-# Address-Specific Rent vs. Buy Calculator (Beyond NYT)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Project Vision
-A high-fidelity financial modeling tool that moves beyond generic calculators. This project leverages address-level data to help users make "Rent vs. Invest" decisions by accounting for the true opportunity cost of capital, localized tax structures (specifically New York State), and specific property data.
+## Getting Started
 
-The goal is to determine the exact **Breakeven Year** where the net worth of a homeowner exceeds the net worth of a renter who invests their surplus cash into the market.
+First, run the development server:
 
-## Project Management Approach
-This project is managed using a **Product Management (PM) Framework**. The development process prioritizes:
-- **Logic-First Development:** Ensuring the financial math is accurate before building UI.
-- **Scope Management:** Focusing on high-utility features that provide "Beyond NYT" value.
-- **Roadmap Clarity:** Maintaining a strict versioning and feature prioritization list.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Core Feature Set (MVP)
-- **Address-Level Data:** Integration with property APIs to pull actual tax history and market estimates for specific addresses.
-- **The "Opportunity Cost" Engine:** A dual-track simulator comparing:
-    - **Scenario A (Homeowner):** Equity growth + appreciation minus PITI (Principal, Interest, Taxes, Insurance), maintenance, and closing costs.
-    - **Scenario B (Renter/Investor):** Total net worth if the down payment and monthly "mortgage-rent difference" were invested in the market (S&P 500).
-- **The Buffalo/NY Context:**
-    - Support for NY-specific tax exemptions (e.g., STAR credit).
-    - Adjusted maintenance schedules for older Northeast housing stock.
-    - "Sweat Equity" toggles for DIY or family-assisted maintenance logic.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Technical Stack
-- **Frontend:** Next.js / React
-- **Logic:** TypeScript
-- **Visuals:** Chart.js or Recharts for breakeven visualization.
-- **Data:** Google Places API (Autocomplete) + Property Data API (e.g., RentCast, ATTOM, or Estated).
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Current Roadmap
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Sprint 1: The Math Foundation (Current Focus)
-- [ ] Define the "Truth Formula" for the breakeven calculation.
-- [ ] Build logic to handle compound interest for the "Renter" scenario (investing the down payment).
-- [ ] Implement NY property tax calculation logic (City vs. School taxes).
+## Learn More
 
-### Sprint 2: Data & Address Integration
-- [ ] Connect address autocomplete via Google Places.
-- [ ] Fetch real-time property tax and valuation data via API.
-- [ ] Implement fallback "Manual Input" for missing API data.
+To learn more about Next.js, take a look at the following resources:
 
-### Sprint 3: The Investor Dashboard
-- [ ] Create interactive charts showing Net Worth comparison over 30 years.
-- [ ] Add "What-If" toggles for market returns (4% vs 7% vs 10%).
-- [ ] Build a summary view for "Breakeven Year" and "Total Cost of Ownership."
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
-*Managed by Jules (AI Developer) under the direction of the Product Lead.*
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
